@@ -41,7 +41,6 @@ git push
 ```text
 init.lua              loads the base config
 base/                 naysayer.nvim submodule
-after/plugin/         personal options, plugins, and workflows
 lsp/                  native Neovim LSP configurations
 nvim-pack-lock.json   vim.pack lockfile
 ```
