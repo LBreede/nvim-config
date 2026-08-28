@@ -13,6 +13,14 @@ overlay.
 Change standalone editor behavior inside `base/` and commit it to the
 `naysayer.nvim` repository.
 
+Before editing the submodule, attach it to its branch and update it:
+
+```sh
+cd base
+git switch master
+git pull --ff-only
+```
+
 Change plugins, LSP configuration, personal options, keymaps, formatting,
 building, and running in this repository. Do not duplicate base configuration
 in the overlay.
