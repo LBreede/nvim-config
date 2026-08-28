@@ -1,4 +1,4 @@
 [submodule "base"]
 	path = base
-	url = git@github.com:LBreede/naysayer.nvim.git
+	url = ../naysayer.nvim.git
 	branch = master

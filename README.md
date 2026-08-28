@@ -9,11 +9,23 @@ build/run commands without duplicating the base config.
 
 ## Install
 
+HTTPS:
+
+```sh
+git clone --recurse-submodules \
+  https://github.com/LBreede/nvim-config.git \
+  "$HOME/.config/nvim"
+```
+
+SSH:
+
 ```sh
 git clone --recurse-submodules \
   git@github.com:LBreede/nvim-config.git \
   "$HOME/.config/nvim"
 ```
+
+The relative submodule URL uses the same transport as the parent clone.
 
 ## Update Base
 
