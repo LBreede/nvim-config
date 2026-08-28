@@ -1,0 +1,11 @@
+# Keep editing indentation aligned with stylua without setting 'textwidth'.
+
+root = true
+
+[*.lua]
+indent_style = space
+indent_size = 2
+
+[*.{md,json,toml,yml,yaml}]
+indent_style = space
+indent_size = 2
