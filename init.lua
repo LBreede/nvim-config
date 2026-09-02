@@ -222,7 +222,7 @@ do
     vim.fn.winrestview(view)
   end
 
-  vim.keymap.set({ "n", "v" }, "<leader>f", function()
+  vim.keymap.set("n", "<leader>f", function()
     local buf = vim.api.nvim_get_current_buf()
     local build = formatters[vim.bo[buf].filetype]
     if build then
