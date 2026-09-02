@@ -59,6 +59,18 @@ do
   vim.schedule(function()
     vim.o.clipboard = "unnamedplus"
   end)
+
+  -- Return to the last cursor position recorded in ShaDa when reopening a file.
+  vim.api.nvim_create_autocmd("BufReadPost", {
+    desc = "Restore the last cursor position",
+    group = vim.api.nvim_create_augroup("last-position", { clear = true }),
+    callback = function(args)
+      local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+      if mark[1] > 0 and mark[1] <= vim.api.nvim_buf_line_count(args.buf) then
+        vim.api.nvim_win_set_cursor(0, mark)
+      end
+    end,
+  })
 end
 
 -- ============================================================
