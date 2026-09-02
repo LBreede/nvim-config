@@ -40,13 +40,13 @@ vim.keymap.set("i", "'", quote, {
   desc = "Pair ' for character and byte literals",
 })
 
--- Generics follow an identifier directly (`Vec<`), a comparison does not
--- (`a < b`), and `>` only ever jumps over a bracket that is already there, so
--- `->`, `=>` and `<<` are untouched.
+-- Generics follow an identifier directly (`Vec<`) or a turbofish (`Vec::<`), a
+-- comparison does not (`a < b`), and `>` only ever jumps over a bracket that is
+-- already there, so `->`, `=>` and `<<` are untouched.
 pairs_mod.map_buf(0, "i", "<", {
   action = "open",
   pair = "<>",
-  neigh_pattern = "^[%w_]",
+  neigh_pattern = "^[%w_:]",
   register = { cr = false },
 })
 pairs_mod.map_buf(0, "i", ">", {
