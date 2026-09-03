@@ -21,11 +21,21 @@ do
   -- Pin the only third-party plugins to their stable branches.
   vim.pack.add({
     { src = "https://github.com/nvim-mini/mini.pairs", version = "stable" },
+    { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
     { src = "https://github.com/nvim-mini/mini.surround", version = "stable" },
   })
 
   require("mini.pairs").setup()
   require("mini.surround").setup()
+
+  local pick = require("mini.pick")
+  pick.setup()
+  vim.keymap.set("n", "<leader>sf", pick.builtin.files, { desc = "[S]earch [F]iles" })
+  vim.keymap.set("n", "<leader>sg", pick.builtin.grep_live, { desc = "[S]earch [G]rep" })
+  vim.keymap.set("n", "<leader>sb", pick.builtin.buffers, { desc = "[S]earch [B]uffers" })
+  vim.keymap.set("n", "<leader>sh", pick.builtin.help, { desc = "[S]earch [H]elp" })
+  vim.keymap.set("n", "<leader>sr", pick.builtin.resume, { desc = "[S]earch [R]esume" })
+  vim.api.nvim_set_hl(0, "MiniPickMatchCurrent", { link = "PmenuSel" })
 
   -- Bundled optional packages.
   vim.cmd.packadd("nvim.undotree")
