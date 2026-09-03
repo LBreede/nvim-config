@@ -120,6 +120,10 @@ do
 
     return "<S-Tab>"
   end, { expr = true, desc = "Previous completion" })
+
+  vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", {
+    desc = "Clear search highlighting",
+  })
 end
 
 -- ============================================================
