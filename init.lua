@@ -127,7 +127,7 @@ end
 -- ============================================================
 do
   -- Keep names available for the missing-server statusline check below.
-  local servers = { "clangd", "basedpyright", "rust_analyzer", "ols" }
+  local servers = { "clangd", "basedpyright", "ruby_lsp", "rust_analyzer", "ols" }
   vim.lsp.enable(servers)
 
   ---Show only the actionable state: a configured server is missing.
