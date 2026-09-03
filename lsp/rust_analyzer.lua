@@ -5,6 +5,13 @@ local config = {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
   root_markers = { "Cargo.toml", "rust-project.json", ".git" },
+  settings = {
+    ["rust-analyzer"] = {
+      check = {
+        command = "clippy",
+      },
+    },
+  },
 }
 
 -- sysrootSrc is initialization-only and must omit the rust-analyzer prefix.
