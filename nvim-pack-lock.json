@@ -1,0 +1,48 @@
+{
+  "plugins": {
+    "base16-nvim": {
+      "rev": "12d13ab893cddbdc11891eac9f7f599050bc00ce",
+      "src": "git@github.com:wincent/base16-nvim"
+    },
+    "conform.nvim": {
+      "rev": "016802de402556da54c36bd7359b441266b01cdd",
+      "src": "git@github.com:stevearc/conform.nvim"
+    },
+    "fzf-lua": {
+      "rev": "05e44d38de0a79c11fba5f7bf8138791b1dbdd1e",
+      "src": "git@github.com:ibhagwan/fzf-lua"
+    },
+    "gruvbox.nvim": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "git@github.com:ellisonleao/gruvbox.nvim"
+    },
+    "lightline.vim": {
+      "rev": "d042c506cb2e7a59112a72447e0b5fe8739d9d1d",
+      "src": "git@github.com:itchyny/lightline.vim"
+    },
+    "mini.pairs": {
+      "rev": "4a014143fcb4e9df26198ccb3ecff3b9e77a048c",
+      "src": "git@github.com:nvim-mini/mini.pairs"
+    },
+    "mini.surround": {
+      "rev": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18",
+      "src": "git@github.com:nvim-mini/mini.surround"
+    },
+    "naysayer-theme.nvim": {
+      "rev": "92619eeabe1fdbe1392c4cc03e20dda6cbbe809e",
+      "src": "git@github.com:alljokecake/naysayer-theme.nvim.git"
+    },
+    "naysayer.nvim": {
+      "rev": "312e1371d7f8c50d4715286fa307b386a7fce5a1",
+      "src": "git@github.com:jwllzp/naysayer.nvim.git"
+    },
+    "nvim-lspconfig": {
+      "rev": "3e8d598d3b5f8338a41699c436e5fa11d2666cf0",
+      "src": "git@github.com:neovim/nvim-lspconfig.git"
+    },
+    "vague.nvim": {
+      "rev": "f9060fdaf7b20f68575d6f8214da6f1cf0c72825",
+      "src": "git@github.com:vague-theme/vague.nvim.git"
+    }
+  }
+}

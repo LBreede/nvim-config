@@ -1,0 +1,10 @@
+# Local Neovim files
+nvim.log
+*.swp
+*.swo
+*.swn
+*.un~
+*~
+
+# OS metadata
+.DS_Store
