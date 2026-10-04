@@ -1,6 +1,6 @@
 return {
   cmd = function(dispatchers, config)
-    return vim.lsp.rpc.start({ "mise", "exec", "--", "ruby-lsp" }, dispatchers, {
+    return vim.lsp.rpc.start({ "mise", "exec", "ruby@4.0.6", "--", "ruby-lsp" }, dispatchers, {
       cwd = config.root_dir,
     })
   end,
