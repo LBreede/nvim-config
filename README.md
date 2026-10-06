@@ -14,8 +14,10 @@ Install the tools you use:
 | Python language server and formatter | `basedpyright-langserver`, `black` |
 | Rust language server, checks, and formatting | `rust-analyzer`, `cargo` with Clippy and rustfmt |
 | Lua language server and formatter | `lua-language-server`, `stylua` |
+| Zig language server and formatter | `zls`, `zig` |
 
 Additional language server configs for Ruby, Swift, Odin, and JavaScript/TypeScript live in `lsp/`.
+Use matching Zig and ZLS release series (for example, Zig 0.16 with ZLS 0.16).
 
 ## Key commands
 
@@ -29,4 +31,4 @@ Additional language server configs for Ruby, Swift, Odin, and JavaScript/TypeScr
 | `:InlayHints` | Toggle inlay hints for the current buffer (off by default) |
 | `<Esc>` in normal mode | Clear search highlighting |
 
-Python uses Black. Lua uses StyLua and the two-space style in `stylua.toml`. Rust uses rustfmt on save and Clippy for checks through rust-analyzer.
+Python uses Black. Lua uses StyLua and the two-space style in `stylua.toml`. Rust uses rustfmt on save and Clippy for checks through rust-analyzer. Zig uses `zig fmt` on save.

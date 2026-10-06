@@ -79,9 +79,10 @@ conform.setup({
     python = { "black" },
     lua = { "stylua" },
     rust = { "rustfmt" },
+    zig = { "zigfmt" },
   },
   format_on_save = function(buf)
-    if vim.bo[buf].filetype == "rust" then
+    if vim.bo[buf].filetype == "rust" or vim.bo[buf].filetype == "zig" then
       return { timeout_ms = 5000, lsp_format = "fallback" }
     end
   end,
@@ -134,4 +135,4 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.opt.showmode = false
 
 -- Language servers
-vim.lsp.enable({ "rust_analyzer", "ruby_lsp", "basedpyright", "lua_ls", "sourcekit", "ols", "ts_ls" })
+vim.lsp.enable({ "rust_analyzer", "ruby_lsp", "basedpyright", "lua_ls", "sourcekit", "ols", "ts_ls", "zls" })
