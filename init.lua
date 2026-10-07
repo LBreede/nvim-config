@@ -81,9 +81,10 @@ conform.setup({
     lua = { "stylua" },
     rust = { "rustfmt" },
     zig = { "zigfmt" },
+    html = { "deno_fmt" },
   },
   format_on_save = function(buf)
-    if vim.bo[buf].filetype == "rust" or vim.bo[buf].filetype == "zig" then
+    if vim.tbl_contains({ "rust", "zig", "html" }, vim.bo[buf].filetype) then
       return { timeout_ms = 5000, lsp_format = "fallback" }
     end
   end,
